@@ -1,8 +1,9 @@
 require 'spec_helper'
+require 'link'
 
 describe Link do
 
-  context 'Demonstration of how DataMapper works' do
+ context 'Demonstration of how DataMapper works' do 
 
     it 'should be created and the retrieved from the db' do
       expect(Link.count).to eq(0)
@@ -15,6 +16,15 @@ describe Link do
       link.destroy
       expect(Link.count).to eq(0)
     end
-  end
+
+    it '2 links can be created' do
+      expect(Link.count).to eq(0)
+      Link.create(:title => "Makers Academy",
+                  :url => "http://www.makersacademy.com/")
+      Link.create(:title => "Google",
+                  :url => "http://www.google.com/")
+      expect(Link.count).to eq(2)
+    end
+ end      
 end
 

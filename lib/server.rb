@@ -1,3 +1,4 @@
+require 'sinatra'
 require 'rubygems'
 require 'data_mapper'
 
@@ -11,3 +12,7 @@ require './lib/link'
 DataMapper.finalize
 
 DataMapper.auto_upgrade!
+
+get '/' do
+  erb :index
+end
