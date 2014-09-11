@@ -6,6 +6,7 @@ gem 'database_cleaner'
 gem 'capybara'
 gem 'rack-flash3'
 gem 'sinatra-partial'
+gem 'thin'
 
 group :development, :test do
   gem "rspec"
