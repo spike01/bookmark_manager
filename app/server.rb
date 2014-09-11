@@ -1,12 +1,12 @@
 require 'sinatra'
 require 'rubygems'
 require 'data_mapper'
-require './lib/link'
-require './lib/tag'
-require './lib/user'
+require 'link'
+require 'tag'
+require 'user'
 require 'rack-flash'
 require_relative 'helpers/application'
-require_relative 'data_mapper_setup'
+require_relative 'helpers/data_mapper_setup'
 
 enable :sessions
 set :session_secret, 'super secret'
