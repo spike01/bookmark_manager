@@ -5,6 +5,7 @@ gem 'sinatra'
 gem 'database_cleaner'
 gem 'capybara'
 gem 'rack-flash3'
+gem 'sinatra-partial'
 
 group :development, :test do
   gem "rspec"
