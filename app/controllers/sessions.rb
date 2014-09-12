@@ -16,6 +16,6 @@
 
   delete '/sessions' do
     session[:user_id] = nil
-    flash[:notice] = "Good bye!"
+    flash.now[:notice] = "Good bye!"
     erb :"sessions/new"
   end
